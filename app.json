@@ -1,0 +1,39 @@
+{
+  "id": "404f5bf0-33a0-4f90-9231-fd61316c000c",
+  "name": "Interim WMS BC Reports",
+  "publisher": "Robosol",
+  "version": "1.0.0.1",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "89b2d3ff-cff9-4506-9a14-597a5b6d370f",
+      "name": "Interim WMS BC Customisation",
+      "publisher": "Robosol",
+      "version": "1.0.0.2"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "20.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "9.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
