@@ -1,4 +1,4 @@
-tableextension 50111 LotBinBufferExt1 extends "Lot Bin Buffer"
+tableextension 50101 LotBinBufferExt1 extends "Lot Bin Buffer"
 {
     fields
     {
