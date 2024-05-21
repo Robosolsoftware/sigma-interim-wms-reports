@@ -1,4 +1,4 @@
-permissionset 50100 GeneratedPermission
+permissionset 50100 SigmaPLCReport
 {
     Assignable = true;
     Permissions = report "Auto Email Daily Sales Invoice"=X,
