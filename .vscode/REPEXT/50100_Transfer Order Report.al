@@ -80,6 +80,13 @@ reportextension 50100 TransferOrderRepExt extends "Transfer Order"
             {
 
             }
+            column(Variant_Code; "Variant Code")
+            {
+
+            }
+            column(SrNo; SrNo)
+            {
+            }
         }
         modify("Transfer Line")
         {
@@ -117,7 +124,7 @@ reportextension 50100 TransferOrderRepExt extends "Transfer Order"
                 end else
                     G_transferbin := "Transfer Line"."Transfer-from Bin Code";
 
-
+                SrNo := SrNo + 1;
             end;
         }
     }
@@ -125,6 +132,7 @@ reportextension 50100 TransferOrderRepExt extends "Transfer Order"
     var
         myInt: Integer;
     begin
+        Clear(SrNo);
         G_CompInfo.GET;
         G_CompInfo.CALCFIELDS(G_CompInfo.Picture);
     end;
@@ -136,4 +144,5 @@ reportextension 50100 TransferOrderRepExt extends "Transfer Order"
         Pallet: Decimal;
         G_transferbin: Text;
         TransferLineQty: Decimal;
+        SrNo: Integer;
 }
