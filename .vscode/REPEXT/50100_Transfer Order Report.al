@@ -87,6 +87,10 @@ reportextension 50100 TransferOrderRepExt extends "Transfer Order"
             column(SrNo; SrNo)
             {
             }
+            column(Outstanding_Quantity; "Outstanding Quantity")
+            {
+
+            }
         }
         modify("Transfer Line")
         {

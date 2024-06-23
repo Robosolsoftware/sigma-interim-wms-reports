@@ -2,7 +2,7 @@
   "id": "404f5bf0-33a0-4f90-9231-fd61316c000c",
   "name": "Interim WMS BC Reports",
   "publisher": "Robosol",
-  "version": "24.0.0.1",
+  "version": "24.0.0.2",
   "brief": "",
   "description": "",
   "privacyStatement": "",
@@ -15,7 +15,7 @@
       "id": "89b2d3ff-cff9-4506-9a14-597a5b6d370f",
       "name": "Interim WMS BC Customisation",
       "publisher": "Robosol",
-      "version": "24.0.0.10"
+      "version": "24.0.0.19"
     }
   ],
   "screenshots": [],
