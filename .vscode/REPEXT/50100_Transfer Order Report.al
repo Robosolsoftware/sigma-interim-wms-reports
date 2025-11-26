@@ -55,7 +55,40 @@ reportextension 50100 TransferOrderRepExt extends "Transfer Order"
             column(Logo; G_CompInfo.Picture)
             {
             }
+            column(FridgeItem; G_FridgeItem)
+            {
+            }
         }
+        modify("Transfer Header")
+        {
+            trigger OnAfterAfterGetRecord()
+            var
+                L_transferline: Record "Transfer Line";
+                L_warehouseclass: Record "Warehouse Class";
+            begin
+                //get Fridge Item from warehouse Class code+++
+                Clear(G_FridgeItem);
+                L_transferline.Reset();
+                L_transferline.SetRange("Document No.", "Transfer Header"."No.");
+                if L_transferline.FindSet() then begin
+                    repeat
+                        G_Item.Reset();
+                        G_Item.SetRange("No.", L_transferline."Item No.");
+                        if G_Item.FindFirst() then begin
+                            L_warehouseclass.Reset();
+                            L_warehouseclass.SetRange(Code, G_Item."Warehouse Class Code");
+                            if L_warehouseclass.FindFirst() then begin
+                                if L_warehouseclass.Fridge = true then begin
+                                    G_FridgeItem := true;
+                                    break;
+                                end;
+                            end;
+                        end;
+                    until L_transferline.Next() = 0;
+                end;
+            end;
+        }
+
         add("Transfer Line")
         {
             column(PackSize; "Pack Size")
@@ -149,4 +182,6 @@ reportextension 50100 TransferOrderRepExt extends "Transfer Order"
         G_transferbin: Text;
         TransferLineQty: Decimal;
         SrNo: Integer;
+        G_FridgeItem: Boolean;
+        Test: Page "Posted Sales Invoices";
 }

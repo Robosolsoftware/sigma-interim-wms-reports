@@ -6,7 +6,8 @@
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Sigma_Beta_UAT",
+            //"environmentName": "Sigma_UAT",
+            "environmentName": "SIGMAFTP_DEV",
             "tenant": "55614040-8b3d-41a1-bae8-2140b06bd0c3",
             "startupObjectId": 18,
             "startupObjectType": "Page",
@@ -14,7 +15,7 @@
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-            "schemaUpdateMode": "ForceSync"
+            "schemaUpdateMode": "Synchronize"
         }
     ]
 }
